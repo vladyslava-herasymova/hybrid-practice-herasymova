@@ -1,0 +1,21 @@
+problem,title,pipeline,run,correct,status,expected_status,match_pct,llm_calls,seconds,reason
+B1,Canteen queue,hybrid,1,True,multiple,multiple,,2,26.6,status correct; the example solution given is not a valid one
+B1,Canteen queue,hybrid,2,True,multiple,multiple,,2,24.5,status correct; the example solution given is not a valid one
+B1,Canteen queue,monolith,1,True,multiple,multiple,,1,50.2,
+B1,Canteen queue,monolith,2,True,multiple,multiple,,1,49.5,
+B2,Cryptarithm,hybrid,1,False,multiple,unique,11,2,28.5,"status multiple, expected unique"
+B2,Cryptarithm,hybrid,2,False,multiple,unique,11,2,28.8,"status multiple, expected unique"
+B2,Cryptarithm,monolith,1,False,none,unique,0,1,11.7,"status none, expected unique"
+B2,Cryptarithm,monolith,2,False,none,unique,0,1,11.7,"status none, expected unique"
+B3,Meeting week,hybrid,1,False,none,unique,0,1,20.4,"status none, expected unique"
+B3,Meeting week,hybrid,2,False,none,unique,0,1,17.1,"status none, expected unique"
+B3,Meeting week,monolith,1,False,unique,unique,67,1,36.7,solution differs (67% of values correct)
+B3,Meeting week,monolith,2,False,unique,unique,67,1,25.9,solution differs (67% of values correct)
+B4,Siblings' ages,hybrid,1,False,none,unique,0,1,17.0,"status none, expected unique"
+B4,Siblings' ages,hybrid,2,False,none,unique,0,1,13.6,"status none, expected unique"
+B4,Siblings' ages,monolith,1,False,unique,unique,75,1,44.8,solution differs (75% of values correct)
+B4,Siblings' ages,monolith,2,True,unique,unique,100,1,57.8,
+B5,Drinks,hybrid,1,False,,unique,,2,23.9,ERROR: HybridError: solver rejected the IR: too many values to unpack (expected 2)
+B5,Drinks,hybrid,2,False,,unique,,2,22.1,ERROR: HybridError: solver rejected the IR: too many values to unpack (expected 2)
+B5,Drinks,monolith,1,True,unique,unique,100,1,29.2,
+B5,Drinks,monolith,2,True,unique,unique,100,1,24.5,

@@ -1,0 +1,95 @@
+{
+ "problem": "B2",
+ "pipeline": "hybrid",
+ "run": 1,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-10-07T22:59:23",
+ "answer": {
+  "status": "multiple",
+  "solution": {
+   "N": 1,
+   "O": 2,
+   "D": 1,
+   "E": 1,
+   "G": 4,
+   "R": 2,
+   "A": 9,
+   "P": 0,
+   "H": 0
+  },
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "NODE": [
+       1,
+       9
+      ],
+      "EDGE": [
+       1,
+       9
+      ],
+      "GRAPH": [
+       1,
+       9
+      ],
+      "O": [
+       1,
+       9
+      ],
+      "N": [
+       1,
+       9
+      ],
+      "E": [
+       1,
+       9
+      ],
+      "D": [
+       1,
+       9
+      ],
+      "A": [
+       1,
+       9
+      ]
+     },
+     "all_different": [
+      [
+       "NODE",
+       "EDGE",
+       "GRAPH"
+      ]
+     ],
+     "constraints": [
+      "NODE % 2 == 0",
+      "(O > N) and (N > 0)",
+      "A == 9"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "multiple",
+   "n_solutions": 5,
+   "objective": null,
+   "first_solution": {
+    "NODE": 4,
+    "EDGE": 1,
+    "GRAPH": 2,
+    "O": 2,
+    "N": 1,
+    "E": 1,
+    "D": 1,
+    "A": 9
+   }
+  }
+ },
+ "error": null,
+ "seconds": 28.5,
+ "llm_calls": 2
+}

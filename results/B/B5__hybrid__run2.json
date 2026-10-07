@@ -1,0 +1,13 @@
+{
+ "problem": "B5",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-10-07T23:05:31",
+ "answer": null,
+ "trace": null,
+ "error": "HybridError: solver rejected the IR: too many values to unpack (expected 2)",
+ "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\vlady\\Desktop\\Education\\Uni - Masters\\TRSSHI\\hybrid-practice\\src\\hybrid.py\", line 272, in solve\n    result = run_solver(ir)\n             ^^^^^^^^^^^^^^\n  File \"C:\\Users\\vlady\\Desktop\\Education\\Uni - Masters\\TRSSHI\\hybrid-practice\\src\\hybrid.py\", line 221, in run_solver\n    return ir_solver.solve(ir, limit=5)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\vlady\\Desktop\\Education\\Uni - Masters\\TRSSHI\\hybrid-practice\\src\\ir_solver.py\", line 119, in solve\n    zv, cons, conv = build(ir)\n                     ^^^^^^^^^\n  File \"C:\\Users\\vlady\\Desktop\\Education\\Uni - Masters\\TRSSHI\\hybrid-practice\\src\\ir_solver.py\", line 107, in build\n    lo, hi = dom\n    ^^^^^^\nValueError: too many values to unpack (expected 2)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\vlady\\Desktop\\Education\\Uni - Masters\\TRSSHI\\hybrid-practice\\src\\run.py\", line 41, in run_one\n    out = PIPELINES[name].solve(problem)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\vlady\\Desktop\\Education\\Uni - Masters\\TRSSHI\\hybrid-practice\\src\\hybrid.py\", line 274, in solve\n    raise HybridError(f\"solver rejected the IR: {e}\") from e\nhybrid.HybridError: solver rejected the IR: too many values to unpack (expected 2)\n",
+ "seconds": 22.1,
+ "llm_calls": 2
+}
